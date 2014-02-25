@@ -1,0 +1,14 @@
+'use strict';
+
+var mongoose = require('mongoose'),
+    Schema = mongoose.Schema;
+    
+/**
+ * Happiness rating Schema
+ */
+var HappinessRatingSchema = new Schema({
+	admin_email: String,
+	admin_password: String,
+	subscribers: [ {email: String} ],
+	votes: [ { date: Date, email: String, rating: Number, comment: String } ]
+});
